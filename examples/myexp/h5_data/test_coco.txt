@@ -1,0 +1,1 @@
+/home/fan6/lstm/caffe-caption/examples/myexp/h5_data/test_coco.h5

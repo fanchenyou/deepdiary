@@ -1,0 +1,15 @@
+train_net: "/home/fan6/lstm/caffe-caption/examples/myexp/lstm_train_lifelog.prototxt"
+test_net: "/home/fan6/lstm/caffe-caption/examples/myexp/lstm_test_lifelog.prototxt"
+test_iter: 10
+test_interval: 5000
+base_lr: 0.0001
+display: 1000
+max_iter: 200000
+lr_policy: "step"
+gamma: 0.5
+weight_decay: 0.0005
+stepsize: 10000
+snapshot: 50000
+snapshot_prefix: "/home/fan6/lstm/caffe-caption/examples/myexp/snapshot/chp_only_lifelog"
+rms_decay: 0.98
+type: "RMSProp"

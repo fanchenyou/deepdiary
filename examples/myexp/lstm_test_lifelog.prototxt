@@ -1,0 +1,121 @@
+layer {
+  name: "img"
+  type: "HDF5Data"
+  top: "img"
+  top: "sent"
+  top: "pred"
+  hdf5_data_param {
+    source: "/home/fan6/lstm/caffe-caption/examples/myexp/h5_data/test_lifelog.txt"
+    batch_size: 32
+    shuffle: true
+  }
+}
+layer {
+  name: "input1"
+  type: "CaptionInput"
+  bottom: "img"
+  bottom: "sent"
+  top: "input1"
+  caption_input_param {
+    hidden_size: 512
+    weight_filler {
+      type: "xavier"
+    }
+    vocabulary_size: 4539
+    image_size: 4096
+    sequence_len: 30
+  }
+}
+layer {
+  name: "drop1"
+  type: "Dropout"
+  bottom: "input1"
+  top: "input1"
+  dropout_param {
+    dropout_ratio: 0.5
+  }
+}
+layer {
+  name: "lstm1"
+  type: "Lstm"
+  bottom: "input1"
+  top: "lstm1"
+  lstm_param {
+    hidden_size: 512
+    clipping_threshold: 5.0
+    weight_filler {
+      type: "xavier"
+    }
+    vocabulary_size: 4539
+    image_size: 4096
+    sequence_len: 30
+  }
+}
+layer {
+  name: "drop2"
+  type: "Dropout"
+  bottom: "lstm1"
+  top: "lstm1"
+  dropout_param {
+    dropout_ratio: 0.5
+  }
+}
+layer {
+  name: "ip1"
+  type: "InnerProduct"
+  bottom: "lstm1"
+  top: "ip1"
+  inner_product_param {
+    num_output: 512
+    weight_filler {
+      type: "xavier"
+    }
+  }
+}
+layer {
+  name: "lstm2"
+  type: "Lstm"
+  bottom: "ip1"
+  top: "lstm2"
+  lstm_param {
+    hidden_size: 512
+    clipping_threshold: 5.0
+    weight_filler {
+      type: "xavier"
+    }
+    vocabulary_size: 4539
+    image_size: 4096
+    sequence_len: 30
+  }
+}
+layer {
+  name: "drop3"
+  type: "Dropout"
+  bottom: "lstm2"
+  top: "lstm2"
+  dropout_param {
+    dropout_ratio: 0.5
+  }
+}
+layer {
+  name: "ip2"
+  type: "InnerProduct"
+  bottom: "lstm2"
+  top: "ip2"
+  inner_product_param {
+    num_output: 4539
+    weight_filler {
+      type: "xavier"
+    }
+  }
+}
+layer {
+  name: "loss"
+  type: "LstmLoss"
+  bottom: "ip2"
+  bottom: "pred"
+  top: "loss"
+  loss_param {
+    ignore_label: -1
+  }
+}
