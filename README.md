@@ -1,6 +1,6 @@
 # Deepdiary
 This repository is caffe([BVLC](http://bvlc.eecs.berkeley.edu)) implementation of image captioning on lifelogging data.
-Please see our paper[[1](https://arxiv.org/abs/1608.03819)] for information of how to use this package on your own dataset.
+Please see our paper([1](https://arxiv.org/abs/1608.03819)) for information of how to use this package on your own dataset.
 
 The core of this code is 
 - src/caffe/layers/caption_input_layer.cu
