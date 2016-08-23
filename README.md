@@ -1,5 +1,5 @@
 # Deepdiary
-This repository is caffe([BVLC](http://bvlc.eecs.berkeley.edu)) implementation of image captioning on lifelogging data.
+This repository is [caffe](http://caffe.berkeleyvision.org/) implementation of image captioning on lifelogging data.
 Please see our paper([1](https://arxiv.org/abs/1608.03819)) for information of how to use this package on your own dataset.
 
 The core of this code is 
