@@ -11,8 +11,8 @@ The core of this code is
 ## Training
 To run training demo, 
 - clone this repository to your directory, say $CAFFE_ROOT
-- ask author to share lifelogging packed data (image features and sentences) and extract them to examples/myexp/data
-- download VGG_ILSVRC_16_layers.caffemodel from https://gist.github.com/ksimonyan/211839e770f7b538e2d8#file-readme-md and place it into $CAFFE_ROOT/models/VGG_ILSVRC_16_layers
+- download our packed lifelogging data [here](http://vision.soic.indiana.edu/deepdiary_files/data.zip) (image features and sentences) and extract them as examples/myexp/data
+- download VGG_ILSVRC_16_layers.caffemodel from https://github.com/BVLC/caffe/wiki/Model-Zoo and place it into $CAFFE_ROOT/models/VGG_ILSVRC_16_layers
 - cd examples/myexp
 - change setting.py home_dir, global.sh CAFFE_ROOT to same folder that you clone this repo.
 - ./run_finetune.sh
