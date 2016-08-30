@@ -8,10 +8,11 @@ The core of this code is
 - src/caffe/layers/lstm_loss_layer.cu
 
 ## Lifelogging dataset
-We publish our lifelogging dataset by releasing image features along with human labelings. You can download them [here](http://vision.soic.indiana.edu/deepdiary_files/data.zip) (image features and sentences).
-
+We publish our lifelogging dataset by releasing image VGG features along with human labelings. <br> 
+You can download them [here](http://vision.soic.indiana.edu/deepdiary_files/data.zip) (image features and sentences). <br>
 We tend to not publish the whole dataset with real photos for the reason to protect privacy.<br>
-However, we do publish a subset of the dataset with photos which we published on Amazon Mechanical Turk for public labeling. You can download them [here](http://vision.soic.indiana.edu/deepdiary_files/amt_data.zip). <br>
+However, we do list a subset of the dataset with photos which we published on Amazon Mechanical Turk for public labeling. <br>
+You can download them [here](http://vision.soic.indiana.edu/deepdiary_files/amt_data.zip). <br>
 For more details of how the dataset is collected, please refer to our [paper](https://arxiv.org/abs/1608.03819).
 
 ## Training
