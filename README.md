@@ -7,11 +7,15 @@ The core of this code is
 - src/caffe/layers/lstm_layer.cu
 - src/caffe/layers/lstm_loss_layer.cu
 
+## Lifelogging dataset
+We publish our lifelogging dataset by releasing image features along with human labelings. You can download them [here](http://vision.soic.indiana.edu/deepdiary_files/data.zip) (image features and sentences).
+We tend to not publish original photos for the reason to protect privacy.
+For more details of how the dataset is collected, please refer to our [paper](https://arxiv.org/abs/1608.03819).
 
 ## Training
 To run training demo, 
 - clone this repository to your directory, say $CAFFE_ROOT
-- download our packed lifelogging data [here](http://vision.soic.indiana.edu/deepdiary_files/data.zip) (image features and sentences) and extract them as examples/myexp/data
+- download our packed lifelogging data and extract them as examples/myexp/data
 - download VGG_ILSVRC_16_layers.caffemodel from https://github.com/BVLC/caffe/wiki/Model-Zoo and place it into $CAFFE_ROOT/models/VGG_ILSVRC_16_layers
 - cd examples/myexp
 - change setting.py home_dir, global.sh CAFFE_ROOT to same folder that you clone this repo.
@@ -47,7 +51,7 @@ Input takes,
 
 # License and Citation
 
-Please cite the following paper in your publications if it helps your research:
+Please cite the following paper in your publications if you use our dataset or code in your research:
 
     @inproceedings{deepdiary2016eccvw,
       title = {DeepDiary: Automatically Captioning Lifelogging Image Streams},
