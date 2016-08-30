@@ -38,17 +38,13 @@ To predict on you own images,
 - choose your model file in predict.sh. This demo provides two pretrained models by authors. `coco_raw` is a model trained with COCO data, `caffe_finetune` is finetuned by lifelogging data. You will see that `caffe_finetune` produces much better predictions with diverse structures
 - explore examples/myexp/prediction folder, the M-Best diverse technique is implemented in lstm_generator.py
 
-# LSTM formulation
-This implementation strictly follows "Show and Tell: A Neural Image Caption Generator" Eq(4~9)
-https://arxiv.org/abs/1411.4555
-
 
 # Going deep
 Input takes, 
 - json file which contains imageId and sentences as ground truth, which is congruent to Karpathy's neuraltalk ([repo] https://github.com/karpathy/neuraltalk)
 - image features extracted from a CNN (typically bvlc_reference_net or vgg_net)
 
-The core of this repository is composed of cuda implementation of LSTM which designed for caffe
+The core of this repository is composed of caffe cuda implementation of [LSTM](https://arxiv.org/abs/1411.4555)
 ```
 src/caffe/layers/caption_input_layer.cu
 src/caffe/layers/lstm_layer.cu
