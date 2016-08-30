@@ -9,6 +9,7 @@ The core of this code is
 
 ## Lifelogging dataset
 We publish our lifelogging dataset by releasing image features along with human labelings. You can download them [here](http://vision.soic.indiana.edu/deepdiary_files/data.zip) (image features and sentences).
+
 We tend to not publish original photos for the reason to protect privacy.
 For more details of how the dataset is collected, please refer to our [paper](https://arxiv.org/abs/1608.03819).
 
@@ -22,14 +23,18 @@ To run training demo,
 - ./run_finetune.sh
 
 You can also skip training stage, and use our trained models to do prediction
-- cd examples/myexp/models
-- unzip models
+```
+cd examples/myexp/models
+unzip models
+```
 
 ## prediction
 To run testing demo,
-- cd examples/myexp/test_data, check imgs folder, tasks.txt, and vgg_feats.mat
-- cd ..
-- ./predict.sh
+```
+cd examples/myexp/test_data, check imgs folder, tasks.txt, and vgg_feats.mat
+cd ..
+./predict.sh
+```
 
 To predict on you own images, 
 - replace imgs folder with your images, and output names in tasks.txt, one name per line
