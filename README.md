@@ -5,7 +5,7 @@ Please see our paper([1](https://arxiv.org/abs/1608.03819)) for information of h
 ## Lifelogging dataset
 We publish our lifelogging dataset by releasing image VGG features along with human labelings. <br> 
 You can download them [here](http://vision.soic.indiana.edu/deepdiary_files/data.zip) (image features and sentences). <br>
-We tend to not publish the whole dataset with real photos for the reason to protect privacy.<br>
+We tend to not publish the whole dataset with real photos for the reason of protecting privacy.<br>
 However, we do list a subset of the dataset with photos which we published on Amazon Mechanical Turk for public labeling. You can download them [here](http://vision.soic.indiana.edu/deepdiary_files/amt_data.zip). <br>
 For more details of how the dataset is collected, please refer to our [paper](https://arxiv.org/abs/1608.03819).
 
