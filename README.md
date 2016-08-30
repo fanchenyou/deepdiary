@@ -2,11 +2,6 @@
 This repository is [caffe](http://caffe.berkeleyvision.org/) implementation of image captioning on lifelogging data.
 Please see our paper([1](https://arxiv.org/abs/1608.03819)) for information of how to use this package on your own dataset.
 
-The core of this code is 
-- src/caffe/layers/caption_input_layer.cu
-- src/caffe/layers/lstm_layer.cu
-- src/caffe/layers/lstm_loss_layer.cu
-
 ## Lifelogging dataset
 We publish our lifelogging dataset by releasing image VGG features along with human labelings. <br> 
 You can download them [here](http://vision.soic.indiana.edu/deepdiary_files/data.zip) (image features and sentences). <br>
@@ -53,7 +48,12 @@ Input takes,
 - json file which contains imageId and sentences as ground truth, which is congruent to Karpathy's neuraltalk ([repo] https://github.com/karpathy/neuraltalk)
 - image features extracted from a CNN (typically bvlc_reference_net or vgg_net)
 
-
+The core of this repository is composed of cuda implementation of LSTM which designed for caffe
+```
+src/caffe/layers/caption_input_layer.cu
+src/caffe/layers/lstm_layer.cu
+src/caffe/layers/lstm_loss_layer.cu
+```
 
 # License and Citation
 
