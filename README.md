@@ -25,6 +25,10 @@ unzip models
 ```
 
 ## prediction
+This part is implemented with Python. 
+The original code of beam search implementation can be found https://github.com/karpathy/neuraltalk.
+We add [Diverse M-Best Solutions](https://filebox.ece.vt.edu/~dbatra/papers/MBestModes.pdf) in order to produce diverse predictions in sentence structure and style.
+
 To run testing demo,
 ```
 cd examples/myexp/test_data, check imgs folder, tasks.txt, and vgg_feats.mat
@@ -66,5 +70,13 @@ Please cite the following paper in your publications if you use our dataset or c
       Journal = {arXiv preprint arXiv:1408.5093},
       Title = {Caffe: Convolutional Architecture for Fast Feature Embedding},
       Year = {2014}
+    }
+    
+    @inproceedings{karpathy2015deep,
+      title={Deep visual-semantic alignments for generating image descriptions},
+      author={Karpathy, Andrej and Fei-Fei, Li},
+      booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
+      pages={3128--3137},
+      year={2015}
     }
 
